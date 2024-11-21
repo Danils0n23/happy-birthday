@@ -1,0 +1,78 @@
+/* Reseta o margin e padding padrão de todos os elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Melhor controle sobre os tamanhos */
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Definindo uma fonte padrão */
+  line-height: 1.5; /* Aumentando a altura da linha para melhorar a legibilidade */
+  background-color: #f4f4f4; /* Cor de fundo suave para todo o body */
+  color: #333; /* Cor de texto padrão */
+  overflow-x: hidden; /* Evita que a página tenha rolagem horizontal indesejada */
+  height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Garante que a imagem seja escalada proporcionalmente */
+  display: block; /* Elimina o espaçamento em baixo da imagem */
+}
+
+/* Estilo de títulos h1 para torná-los mais responsivos */
+h1 {
+  font-size: 3rem;
+  color: #d6336c; /* Cor do título */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center; /* Títulos centralizados */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  /* Reduzindo o tamanho do título para dispositivos menores */
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Ajustando o padding para o contêiner */
+  div {
+    padding: 10px;
+  }
+
+  /* Ajustando o tamanho das fontes para o parágrafo em telas menores */
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Adicionando padding aos botões ou links */
+  button,
+  a {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Adicionando animação suave de foco em elementos interativos */
+a,
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+button:hover {
+  background-color: #d6336c; /* Mudando a cor de fundo ao passar o mouse */
+  color: white;
+  cursor: pointer;
+}
+
+/* Foco para melhorar a acessibilidade */
+a:focus,
+button:focus {
+  outline: 2px solid #d6336c; /* Foco visível para navegação com teclado */
+}
