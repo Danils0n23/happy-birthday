@@ -117,7 +117,9 @@ const App = () => {
       </audio>
 
       <LoginContainer>
-        <WelcomeMessage>Feliz Aniversário, minha linda!</WelcomeMessage>
+        <WelcomeMessage>
+          Feliz Aniversário, minha princesa linda futura mãe dos 3!
+        </WelcomeMessage>
 
         {/* Aqui podemos integrar os componentes desejados */}
         <Header />

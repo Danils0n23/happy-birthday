@@ -43,34 +43,6 @@ const Media = styled.div`
   }
 `;
 
-// Estilo dos botões de navegação
-const Button = styled.button`
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  ${(props) =>
-    props.direction === "left"
-      ? "left: 10px;"
-      : "right: 10px;"}/* Define a posição dos botões */
-`;
-
 const photos = [
   "/assets/videos/video1.mp4",
   "/assets/videos/video2.mp4",
@@ -122,9 +94,6 @@ const PhotoGallery = () => {
   return (
     <div>
       <Gallery {...handlers}>
-        <Button onClick={prevMedia} direction="left">
-          {"<"}
-        </Button>
         <MediaWrapper>
           <Media>
             {isVideo ? (
@@ -137,9 +106,6 @@ const PhotoGallery = () => {
             )}
           </Media>
         </MediaWrapper>
-        <Button onClick={nextMedia} direction="right">
-          {">"}
-        </Button>
       </Gallery>
     </div>
   );
